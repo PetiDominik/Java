@@ -38,11 +38,7 @@ public class NewClass {
             file.delete();
             file.createNewFile();
         }
-        db = 0;
-        for (String value : sorok){
-            System.out.println("Sor" + (1*db+1) + ": " + sorok[db]);
-            db++;
-        }
+        
         nevek.close();
         
         int i,j;
@@ -61,9 +57,9 @@ public class NewClass {
         RandomAccessFile abc = new RandomAccessFile("rendezettnevek.txt", "rw");
         
         for (i = 0; i < (sorok.length)-1; i++){
-            System.out.println(sorok[i]);
             abc.writeBytes(sorok[i] + "\r\n");
         }
+        System.out.println("A nevek sikeresen sorba lettek rendezve, " + file.getName() + " fájlnéven.");
         
     }
 }
